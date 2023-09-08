@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocHolder-Login</title>
+    <!-- Icons  -->
+    <script src="https://kit.fontawesome.com/49134e791d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  <!--footer&copyrights-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <h1>Doc-Holder Login/signup</h1>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="/login" method="POST" id="signin_form" onsubmit="Validatesignin(event);" name="signin_form">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus-official"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <span>or use your account</span>
+                <div style="width: 100%;">
+                    <input name="email" type="email" placeholder="Email" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>Email is required</span>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <input name="password" type="password" placeholder="Password" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>Password is required</span>
+                    </div>
+                </div>
+                <a href="#">Forgot your password?</a>
+                <button id="login" type="submit">Log in</button>
+            </form>
+        </div>
+        <div class="form-container sign-up-container">
+            <form action="/signup" method="POST" id="signup_form" onsubmit="Validatesignup(event);" name="signup_form">
+                <h1 style="margin: 0;">Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus-official"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <div style="width: 100%;">
+                    <input id="fname" type="text" name="name" placeholder="Name" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>name is required</span>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <input type="email" name="email" placeholder="Email" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>Email is required</span>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <input type="city" name="City" placeholder="City" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>City is required</span>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <input type="state" name="state" placeholder="State" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>State is required</span>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <input type="password" name="password" placeholder="Password" />
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>Password is required</span>
+                    </div>
+                </div>
+                <div class="form-check" style="width: 100%;">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" >
+                    <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
+                    <div class="null_err">
+                        <span> <i class="fa-solid fa-circle-exclamation"></i>You must agree before submitting.</span>
+                    </div>
+                </div>
+
+                <button style="margin-top: 10px;" type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Create account</h1>
+                    <p>Not a member yet!! Register here now.</p>
+                    <button id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>      
+    <!----footer and copyrights-->
+  <section>
+    <footer class="footer">
+      <div class="container1">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contactus</a></li>
+              <li><a href="#">Explore</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/gopi_chand_reddii/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/__vardhan_20/"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/__vardhan_20/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/gopi_chand_reddii/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      <hr>
+      <p class="copyright"> Copyright&copy; 2022 DOC-HOLDER | All Rights Reserved</p>
+      </div>
+   </footer>
+  </section><script type="text/javascript">
+   
+    </script>
+  <script src="login.js"></script>
+</body>
+
+</html>
